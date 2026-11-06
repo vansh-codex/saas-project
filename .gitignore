@@ -1,13 +1,17 @@
 *.iml
+
+# Build outputs (matches the module-level app/build as well as the root one)
+build/
 .gradle
-/local.properties
-/.idea
-.DS_Store
-/build
+.kotlin/
 /captures
 .externalNativeBuild
 .cxx
+
+# Local machine configuration
 local.properties
+/.idea
+.DS_Store
 
 # Keystore / secrets - never commit
 *.jks
