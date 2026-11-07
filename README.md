@@ -20,3 +20,14 @@ Then visit `http://localhost:8000`.
 - Create a pull request locally with the new-pull-request form.
 
 Pull requests and repository changes are in-memory only and reset when the page reloads.
+
+## Android APK
+
+An Android WebView wrapper is included in `android/`. With Android SDK 35 and Java 17 installed, build a debug APK with:
+
+```sh
+cd android
+gradle assembleDebug
+```
+
+The output is `android/app/build/outputs/apk/debug/app-debug.apk`.

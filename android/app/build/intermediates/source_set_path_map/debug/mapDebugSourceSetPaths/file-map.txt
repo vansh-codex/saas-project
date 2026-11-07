@@ -1,0 +1,7 @@
+com.yanshcodex.saasproject.app-pngs-0 /workspace/android/app/build/generated/res/pngs/debug
+com.yanshcodex.saasproject.app-resValues-1 /workspace/android/app/build/generated/res/resValues/debug
+com.yanshcodex.saasproject.app-packageDebugResources-2 /workspace/android/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
+com.yanshcodex.saasproject.app-packageDebugResources-3 /workspace/android/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
+com.yanshcodex.saasproject.app-debug-4 /workspace/android/app/build/intermediates/merged_res/debug/mergeDebugResources
+com.yanshcodex.saasproject.app-debug-5 /workspace/android/app/src/debug/res
+com.yanshcodex.saasproject.app-main-6 /workspace/android/app/src/main/res

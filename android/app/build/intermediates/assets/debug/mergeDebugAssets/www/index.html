@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#17181d" />
+    <title>saas-project · GitHub</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="status-bar" aria-label="Phone status">
+        <span>4:00</span>
+        <div class="status-details">
+          <span class="network-speed">5.97<br />KB/S</span>
+          <span class="network-badge">Vo5G</span>
+          <span class="signal" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span class="network-type">5G+</span>
+          <span class="battery">53</span>
+        </div>
+      </div>
+
+      <main>
+        <section class="screen repository-screen is-active" id="repository-screen" aria-label="Repository">
+          <header class="repo-topbar">
+            <button class="icon-button back-button" aria-label="Back">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg>
+            </button>
+            <div class="topbar-actions">
+              <button class="icon-button" id="repo-add" aria-label="Create new">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v8m-4-4h8" /></svg>
+              </button>
+              <button class="icon-button dots-button" aria-label="More repository options">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="1" /><circle cx="12" cy="12" r="1" /><circle cx="12" cy="19" r="1" /></svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="repo-content">
+            <div class="owner-line"><span class="repo-avatar" aria-hidden="true">◆</span><span>yansh-codex</span></div>
+            <div class="repo-title-row">
+              <h1>saas-project</h1>
+              <span class="repo-private">Public</span>
+            </div>
+            <div class="repo-stats">
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg><strong id="star-count">1</strong> star</span>
+              <span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5" r="2" /><circle cx="18" cy="5" r="2" /><circle cx="12" cy="19" r="2" /><path d="M6 7v4a3 3 0 0 0 3 3h3m6-7v4a3 3 0 0 1-3 3h-3v3" /></svg><strong>0</strong> forks</span>
+            </div>
+            <div class="repo-actions">
+              <button class="square-action star-action" id="star-button" aria-label="Star repository">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.9L12 3Z" /></svg>
+              </button>
+              <button class="list-action" id="add-to-list"><span class="plus">+</span> ADD TO LIST</button>
+              <button class="square-action muted-action" aria-label="Fork repository">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5" r="2" /><circle cx="18" cy="5" r="2" /><circle cx="12" cy="19" r="2" /><path d="M6 7v4a3 3 0 0 0 3 3h3m6-7v4a3 3 0 0 1-3 3h-3v3" /></svg>
+              </button>
+              <button class="square-action muted-action" id="watch-button" aria-label="Watch repository">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9Zm-8 12h4" /></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="repo-menu">
+            <button class="menu-row" data-view="issues"><span class="menu-icon green"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="1.5" /></svg></span><span>Issues</span><span class="row-count">0</span></button>
+            <button class="menu-row" data-view="pull-requests"><span class="menu-icon blue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5" r="2" /><circle cx="6" cy="19" r="2" /><path d="M6 7v10m12-1V8m0 0-3 3m3-3 3 3m-3-3H9a3 3 0 0 0-3 3" /></svg></span><span>Pull Requests</span><span class="row-count">0</span></button>
+            <button class="menu-row" data-view="actions"><span class="menu-icon yellow"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="m10 8 6 4-6 4V8Z" /></svg></span><span>Actions</span></button>
+            <button class="menu-row" id="more-toggle"><span class="menu-icon gray"><span class="ellipsis">•••</span></span><span>More</span><span class="chevron">⌄</span></button>
+          </div>
+
+          <div class="repo-details">
+            <div class="branch-row">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5" r="2" /><circle cx="18" cy="5" r="2" /><circle cx="6" cy="19" r="2" /><path d="M6 7v10m0-7h6a6 6 0 0 0 6-6" /></svg>
+              <div><span>Current branch</span><code>main</code></div>
+              <button class="text-action" id="change-branch">CHANGE</button>
+            </div>
+            <button class="detail-row"><span class="detail-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4h8l4 4v12H4V9l4-5Z" /><path d="M14 4v5h6M8 13l-3 3 3 3m4-1h5" /></svg></span><span>Code</span></button>
+            <button class="detail-row"><span class="detail-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h5m6 0h5" /><circle cx="12" cy="12" r="4" /></svg></span><span>Commits</span></button>
+          </div>
+
+          <div class="readme-row"><span class="info-icon">i</span><span>README.md</span><button class="text-action">EDIT</button></div>
+        </section>
+
+        <section class="screen pulls-screen" id="pulls-screen" aria-label="Pull Requests">
+          <header class="pulls-header">
+            <button class="icon-button back-button" id="back-to-repo" aria-label="Back to repository">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg>
+            </button>
+            <div class="pulls-heading"><span>saas-project</span><h1>Pull Requests</h1></div>
+            <div class="pulls-actions">
+              <button class="icon-button" id="search-toggle" aria-label="Search pull requests">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="7.4" /><path d="m16.2 16.2 5 5" /></svg>
+              </button>
+              <button class="icon-button" id="new-pull" aria-label="Create pull request">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M12 8v8m-4-4h8" /></svg>
+              </button>
+            </div>
+          </header>
+
+          <div class="search-box" id="search-box" hidden><input id="pull-search" type="search" placeholder="Search pull requests" aria-label="Search pull requests" /><button id="search-close" aria-label="Close search">×</button></div>
+          <div class="filter-strip" aria-label="Pull request filters">
+            <button class="filter-chip" data-filter="Status">Open <span class="down-chevron"></span></button>
+            <button class="filter-chip" data-filter="Label">Label <span class="down-chevron"></span></button>
+            <button class="filter-chip" data-filter="Author">Author <span class="down-chevron"></span></button>
+            <button class="filter-chip" data-filter="Assignee">Assignee <span class="down-chevron"></span></button>
+            <button class="filter-chip" data-filter="Milestone">Milestone <span class="down-chevron"></span></button>
+          </div>
+
+          <div class="empty-state" id="empty-state">
+            <svg class="empty-art" viewBox="0 0 440 360" role="img" aria-label="Octocat holding a yellow folder">
+              <ellipse cx="219" cy="310" rx="174" ry="17" fill="#1d1e22" />
+              <path d="M125 244c-10 9-22 20-27 35-4 12 3 20 19 20h68c9 0 14 7 11 14l-3 8c-2 5 1 9 7 9h67c8 0 11-9 5-15l-9-8h-30c-8 0-12-10-4-13h34" fill="#090909" stroke="#74777e" stroke-width="1.6" />
+              <path d="M287 228c4 12 14 20 28 28l13 14c5 6 3 14-4 14h-67c-9 0-13 7-10 14l4 9c2 5-1 9-7 9h-64c-8 0-11-8-5-14l10-9h28c8 0 11-10 3-13l-17-6" fill="#0a0a0b" stroke="#777a80" stroke-width="1.6" />
+              <path d="M313 69c2-15 9-23 17-27l5 5-7 13 6 13-8 10m-21-11c1-15 5-23 13-29l6 4-4 14 5 11-8 9" fill="#bec2c9" stroke="#888c94" stroke-width="1.6" />
+              <path d="M138 132c-25-14-45-2-45 22 0 12 7 22 17 27 8 4 16 3 23 1l16 21c11 17 23 22 43 22h96c32 0 61-16 72-43 8-20 1-39-10-49-5-24-24-35-44-31-12-17-34-25-56-19-24-20-55-17-74-1-14 1-28 13-34 31Z" fill="#121316" stroke="#a5a8ae" stroke-width="2" />
+              <path d="M108 129c-12-17-32-11-32 9 0 13 9 19 21 18 7-1 10-3 15-7" fill="#fbf277" stroke="#e6dc57" stroke-width="2" />
+              <path d="M298 111c5-17 28-21 39-7 7 9 7 20 2 29l-9 20-34-6Z" fill="#fbef64" stroke="#e5d752" stroke-width="2" />
+              <path d="M133 129c10-12 28-21 44-18 17 3 22 12 34 15 12 3 18-7 31-5 13 1 22 12 32 15 12 4 21-5 34-1" fill="none" stroke="#747880" stroke-width="1.4" />
+              <path d="M176 167c-14-5-22-12-32-7-8 4-11 17-4 28 7 13 22 20 40 22m92-48c10-9 26-15 36-9 11 7 10 25 1 39-8 13-21 20-34 22" fill="#202126" stroke="#a5a8ae" stroke-width="2" />
+              <path d="M154 180c-4-14-3-24 3-29 6-4 12 1 18 7 5-7 12-12 17-8 5 4 0 13-2 19m69 12c-5-13-5-24 1-29 6-5 12 0 18 7 6-6 12-10 17-6 5 5-1 14-4 19" fill="none" stroke="#bec1c7" stroke-width="1.7" />
+              <ellipse cx="188" cy="223" rx="12" ry="5" fill="#121316" stroke="#a5a8ae" stroke-width="1.5" />
+              <ellipse cx="255" cy="222" rx="12" ry="5" fill="#121316" stroke="#a5a8ae" stroke-width="1.5" />
+              <path d="M207 225c10 2 20 2 30 0m-26 7c6 4 14 4 20 0" fill="none" stroke="#a5a8ae" stroke-width="1.4" />
+              <path d="M241 217h37v-34h-37l-11 14Z" fill="#e7e8e9" stroke="#c3c5c8" stroke-width="1.4" />
+              <path d="M239 184h88l21 21h-88Z" fill="#fff6aa" stroke="#e5d75d" stroke-width="1.5" />
+              <path d="M260 205h88v59h-88Z" fill="#f6d943" stroke="#e5c930" stroke-width="1.5" />
+              <path d="M260 205h88v10h-88Z" fill="#ffe967" />
+              <path d="M281 206h48v23h-48Z" fill="#f8f4da" />
+              <path d="M284 211h19m-19 4h24m-24 4h18" stroke="#d0cdbd" stroke-width="1" />
+              <path d="M237 185c-3 9-6 19-7 30-1 10-4 14-11 12l-13-5" fill="none" stroke="#9699a0" stroke-width="2" />
+            </svg>
+            <h2>There aren't any pull requests.</h2>
+          </div>
+        </section>
+      </main>
+
+      <nav class="bottom-nav" aria-label="Main navigation">
+        <button class="nav-item selected" data-nav="Home"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v11h-6v-7H9v7H3V10Z" /></svg></span><span>Home</span></button>
+        <button class="nav-item" data-nav="Inbox"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l2 5v9H2v-9l2-5Z" /><path d="M2 13h6l2 3h4l2-3h6" /></svg></span><span>Inbox</span></button>
+        <button class="nav-item" data-nav="Explore"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 14 15-9 4 5-15 9-4-5Z" /><path d="m7 17-3 5m8-4 1 5m4-7 4 4" /></svg></span><span>Explore</span></button>
+        <button class="nav-item" data-nav="Copilot"><span class="nav-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5a4 4 0 0 1 8 0v2H8V5Zm-5 8a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v5H3v-5Z" /><path d="M8 14h.01M16 14h.01M9 18v-2m6 2v-2" /></svg></span><span>Copilot</span></button>
+      </nav>
+      <div class="home-indicator" aria-hidden="true"><span></span></div>
+    </div>
+
+    <div class="popover" id="popover" hidden></div>
+    <dialog id="pull-dialog">
+      <form method="dialog" id="pull-form">
+        <div class="dialog-heading"><h2>New pull request</h2><button class="dialog-close" type="button" aria-label="Close">×</button></div>
+        <label>Title<input name="title" required placeholder="Add a title" /></label>
+        <label>Compare branch<select name="branch"><option>main</option><option>develop</option><option>feature/update</option></select></label>
+        <label>Description<textarea name="description" rows="3" placeholder="Add a description"></textarea></label>
+        <button class="submit-button" value="submit">Create pull request</button>
+      </form>
+    </dialog>
+    <script src="./app.js"></script>
+  </body>
+</html>
